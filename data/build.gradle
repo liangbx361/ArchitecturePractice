@@ -3,6 +3,15 @@ apply plugin: 'com.neenbedankt.android-apt'
 
 dependencies {
     compile fileTree(dir: 'libs', include: ['*.jar'])
+    
+    compile libs.rxJava
+    compile libs.rxAndroid
+    compile libs.retrofitWithJackson
+    compile libs.okHttp
+
+    provided libs.javaxAnnotation
+    provided libs.supportAnnotation
+
     androidTestCompile('com.android.support.test.espresso:espresso-core:2.2.2', {
         exclude group: 'com.android.support', module: 'support-annotations'
     })
