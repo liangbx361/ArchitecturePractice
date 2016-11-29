@@ -1,5 +1,7 @@
 apply from: "${cacheConfigs}/gradle/librarySimplify.gradle"
+apply from: "${cacheConfigs}/gradle/retrolambda.gradle"
 apply plugin: 'com.neenbedankt.android-apt'
+
 
 dependencies {
     compile fileTree(dir: 'libs', include: ['*.jar'])

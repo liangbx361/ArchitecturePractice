@@ -1,4 +1,4 @@
-package com.android.architecture.practice.data.client;
+package com.android.architecture.practice.data.remote;
 
 
 import retrofit.RequestInterceptor;
