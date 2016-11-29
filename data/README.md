@@ -16,3 +16,7 @@ Model
 ## 示例
 * [知乎API](https://github.com/izzyleung/ZhihuDailyPurify/wiki/%E7%9F%A5%E4%B9%8E%E6%97%A5%E6%8A%A5-API-%E5%88%86%E6%9E%90)
 
+## 参考文献
+* [Retrofit2.0 更新说明](http://www.jcodecraeer.com/a/anzhuokaifa/androidkaifa/2015/0915/3460.html)
+* [Android应用架构](http://www.jianshu.com/p/8ca27934c6e6)
+* [浅析MVP中model层设计](http://www.jianshu.com/p/d299153ff853)
