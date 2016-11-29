@@ -35,4 +35,8 @@ public class ServiceManager implements DataSource {
                     }
                 });
     }
+
+    public LatestNews getLatestNews2() {
+        return mClientApi.getLastNews();
+    }
 }

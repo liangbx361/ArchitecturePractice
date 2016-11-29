@@ -17,6 +17,11 @@ import rx.Observable;
 
 public interface ClientApi {
 
+    String BASE_URL = "http://news-at.zhihu.com/api";
+
     @GET("/4/news/latest")
     Observable<LatestNews> getLatestNews();
+
+    @GET("/4/news/latest")
+    LatestNews getLastNews();
 }

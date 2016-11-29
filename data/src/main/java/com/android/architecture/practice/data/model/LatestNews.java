@@ -47,6 +47,7 @@ public class LatestNews {
         this.topStories = topStories;
     }
 
+    @JsonIgnoreProperties(ignoreUnknown = true)
     public static class StoriesEntity {
         private String title;
         @JsonProperty("ga_prefix")
@@ -96,6 +97,7 @@ public class LatestNews {
         }
     }
 
+    @JsonIgnoreProperties(ignoreUnknown = true)
     public static class TopStoriesEntity {
         private String title;
         private String image;

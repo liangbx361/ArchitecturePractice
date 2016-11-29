@@ -19,9 +19,7 @@ public interface DataSource {
 
     enum DataSourceType {
         NETWORK,
-        MEMORY,
-        DATABASE,
-        PREFERENCES
+        CACHE
     }
 
     /**

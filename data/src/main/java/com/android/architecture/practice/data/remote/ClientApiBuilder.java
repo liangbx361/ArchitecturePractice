@@ -18,7 +18,7 @@ import retrofit.converter.JacksonConverter;
  */
 public class ClientApiBuilder {
 
-    public static <T> T build(Class<T> clazz,
+    public static <T> T buildApi(Class<T> clazz,
                               String baseUrl,
                               RequestInterceptor interceptor,
                               Client client) {
@@ -54,7 +54,7 @@ public class ClientApiBuilder {
 
         @Override
         public void log(String message) {
-
+            System.out.println(message);
         }
     }
 }

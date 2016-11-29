@@ -1,3 +1,18 @@
 # Model层
+Model
+
+## 特性
+* 网络数据
+* 内存缓存
+* 数据库持久化缓存
+* 文件持久化缓存
+
+## 可测试性研究方向
+* API验证 
+直接通过发起真实的网络请求验证API是否正确，验证Model是否正确
+* 单元测试
+使用Mock数据验证Model层的处理逻辑是否正确、边界值处理是否正常
+
 ## 示例
 * [知乎API](https://github.com/izzyleung/ZhihuDailyPurify/wiki/%E7%9F%A5%E4%B9%8E%E6%97%A5%E6%8A%A5-API-%E5%88%86%E6%9E%90)
+
