@@ -1,11 +1,10 @@
 # Model层
-Model
+Model层负责统一管理应用数据，包括网络数据、配置数据都通过Model层进行获取和存储。
 
 ## 特性
 * 网络数据
-* 内存缓存
-* 数据库持久化缓存
-* 文件持久化缓存
+* 应用配置数据
+* Http缓存处理
 
 ## 可测试性研究方向
 * API验证 
@@ -20,3 +19,5 @@ Model
 * [Retrofit2.0 更新说明](http://www.jcodecraeer.com/a/anzhuokaifa/androidkaifa/2015/0915/3460.html)
 * [Android应用架构](http://www.jianshu.com/p/8ca27934c6e6)
 * [浅析MVP中model层设计](http://www.jianshu.com/p/d299153ff853)
+* [Android Retrofit 2.0 使用](http://wuxiaolong.me/2016/06/18/retrofits/)
+* [Retrofit 使用教程大全](https://futurestud.io/tutorials/tag/retrofit)

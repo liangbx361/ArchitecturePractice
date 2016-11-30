@@ -1,7 +1,5 @@
 package com.android.architecture.practice.data.model;
 
-import com.android.architecture.practice.data.DataSource;
-
 /**
  * <p>Title: <／p>
  * <p>Description: <／p>
@@ -12,14 +10,14 @@ import com.android.architecture.practice.data.DataSource;
  * @version 2016/11/29
  */
 
-public class Result<T> {
+public class ApiResult<T> {
 
-    public DataSource.DataSourceType mType;
+    public ApiDataSource mApiDataSource;
 
     public T mData;
 
-    public Result(DataSource.DataSourceType type, T data) {
-        mType = type;
+    public ApiResult(ApiDataSource type, T data) {
+        mApiDataSource = type;
         mData = data;
     }
 }

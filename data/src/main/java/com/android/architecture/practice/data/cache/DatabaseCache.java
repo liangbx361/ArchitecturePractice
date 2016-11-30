@@ -2,7 +2,7 @@ package com.android.architecture.practice.data.cache;
 
 import com.android.architecture.practice.data.DataSource;
 import com.android.architecture.practice.data.model.LatestNews;
-import com.android.architecture.practice.data.model.Result;
+import com.android.architecture.practice.data.model.ApiResult;
 
 import rx.Observable;
 
@@ -19,7 +19,7 @@ import rx.Observable;
 public class DatabaseCache implements DataSource {
 
     @Override
-    public Observable<Result<LatestNews>> getLatestNews() {
+    public Observable<ApiResult<LatestNews>> getLatestNews() {
         return Observable.just(null);
     }
 }

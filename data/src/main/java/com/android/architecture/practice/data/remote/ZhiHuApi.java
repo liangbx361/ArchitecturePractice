@@ -2,7 +2,7 @@ package com.android.architecture.practice.data.remote;
 
 import com.android.architecture.practice.data.model.LatestNews;
 
-import retrofit.http.GET;
+import retrofit2.http.GET;
 import rx.Observable;
 
 /**
@@ -15,13 +15,10 @@ import rx.Observable;
  * @version 2016/11/28
  */
 
-public interface ClientApi {
+public interface ZhiHuApi {
 
-    String BASE_URL = "http://news-at.zhihu.com/api";
+    String BASE_URL = "http://news-at.zhihu.com/api/";
 
-    @GET("/4/news/latest")
-    Observable<LatestNews> getLatestNews();
-
-    @GET("/4/news/latest")
-    LatestNews getLastNews();
+    @GET("4/news/latest")
+    Observable<LatestNews> getLastNews();
 }

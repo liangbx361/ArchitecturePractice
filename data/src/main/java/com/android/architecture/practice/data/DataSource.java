@@ -1,7 +1,7 @@
 package com.android.architecture.practice.data;
 
 import com.android.architecture.practice.data.model.LatestNews;
-import com.android.architecture.practice.data.model.Result;
+import com.android.architecture.practice.data.model.ApiResult;
 
 import rx.Observable;
 
@@ -17,14 +17,15 @@ import rx.Observable;
 
 public interface DataSource {
 
+    //数据源类型
     enum DataSourceType {
         NETWORK,
-        CACHE
+        Cache
     }
 
     /**
      * 获取知乎最新消息
      * TODO 或者可使用注解定义缓存的层级
      */
-    Observable<Result<LatestNews>> getLatestNews();
+    Observable<ApiResult<LatestNews>> getLatestNews();
 }
