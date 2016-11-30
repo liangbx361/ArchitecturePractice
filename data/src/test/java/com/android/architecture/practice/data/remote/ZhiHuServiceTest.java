@@ -35,7 +35,7 @@ public class ZhiHuServiceTest {
 
     @Test
     public void getLatestNews() throws Exception {
-        DataManager dataManager = DataManager.getInstance("./cache");
+        DataManager dataManager = DataManager.getInstance("./build/cache");
         ZhiHuService zhiHuService = dataManager.getZhiHuService();
         zhiHuService.getLatestNews()
                 .subscribe(new Action1<ApiResult<LatestNews>>() {
