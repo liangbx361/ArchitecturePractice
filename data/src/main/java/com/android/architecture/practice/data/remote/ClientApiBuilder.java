@@ -77,7 +77,7 @@ public class ClientApiBuilder {
 
         //缓存配置
         File cacheFile = new File(cacheDir, cacheName);
-        Cache cache = new Cache(cacheFile, 1024 * 1024 * 50);
+        Cache cache = new Cache(cacheFile, cacheSize);
         builder.cache(cache);
 
         //拦截器配置

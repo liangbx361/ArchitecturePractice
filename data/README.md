@@ -21,3 +21,5 @@ Model层负责统一管理应用数据，包括网络数据、配置数据都通
 * [浅析MVP中model层设计](http://www.jianshu.com/p/d299153ff853)
 * [Android Retrofit 2.0 使用](http://wuxiaolong.me/2016/06/18/retrofits/)
 * [Retrofit 使用教程大全](https://futurestud.io/tutorials/tag/retrofit)
+* [OkHttp3缓存策略](http://www.jianshu.com/p/9cebbbd0eeab)
+* [HTTP 状态码](http://blog.csdn.net/zll01/article/details/5018413)

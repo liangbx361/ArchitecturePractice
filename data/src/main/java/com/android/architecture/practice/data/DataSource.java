@@ -17,12 +17,6 @@ import rx.Observable;
 
 public interface DataSource {
 
-    //数据源类型
-    enum DataSourceType {
-        NETWORK,
-        Cache
-    }
-
     /**
      * 获取知乎最新消息
      * TODO 或者可使用注解定义缓存的层级
