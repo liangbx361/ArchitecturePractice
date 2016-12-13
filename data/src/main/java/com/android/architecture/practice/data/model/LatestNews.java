@@ -146,4 +146,13 @@ public class LatestNews {
             this.id = id;
         }
     }
+
+    @Override
+    public String toString() {
+        return "LatestNews{" +
+                "date='" + date + '\'' +
+                ", stories=" + stories +
+                ", topStories=" + topStories +
+                '}';
+    }
 }

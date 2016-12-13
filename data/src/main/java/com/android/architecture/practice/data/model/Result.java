@@ -10,14 +10,14 @@ package com.android.architecture.practice.data.model;
  * @version 2016/11/29
  */
 
-public class ApiResult<T> {
+public class Result<T> {
 
-    public ApiDataSource mApiDataSource;
+    public SourceType mSourceType;
 
     public T mData;
 
-    public ApiResult(ApiDataSource type, T data) {
-        mApiDataSource = type;
+    public Result(SourceType type, T data) {
+        mSourceType = type;
         mData = data;
     }
 }

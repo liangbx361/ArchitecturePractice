@@ -12,6 +12,10 @@ Model层负责统一管理应用数据，包括网络数据、配置数据都通
 * 单元测试
 使用Mock数据验证Model层的处理逻辑是否正确、边界值处理是否正常
 
+## 数据库选型
+* GreenDao 效率高
+* Dbflow 支持多数据库，操作方便
+
 ## 示例
 * [知乎API](https://github.com/izzyleung/ZhihuDailyPurify/wiki/%E7%9F%A5%E4%B9%8E%E6%97%A5%E6%8A%A5-API-%E5%88%86%E6%9E%90)
 

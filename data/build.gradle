@@ -15,7 +15,8 @@ android {
 
 dependencies {
     compile fileTree(dir: 'libs', include: ['*.jar'])
-    compile project(':log')
+    compile project(':common-log')
+    compile project(':common-util')
 
     compile libs.rxJava
     compile libs.rxAndroid

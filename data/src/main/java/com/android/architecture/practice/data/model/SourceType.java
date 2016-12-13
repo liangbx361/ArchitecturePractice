@@ -10,7 +10,7 @@ package com.android.architecture.practice.data.model;
  * @version 2016/11/30
  */
 
-public enum ApiDataSource {
+public enum SourceType {
     /**
      * 网络类型表示较新的数据
      */

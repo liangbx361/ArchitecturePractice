@@ -1,8 +1,9 @@
-package com.android.architecture.practice.data.remote;
+package com.android.architecture.practice.data.network;
 
 import com.android.architecture.practice.data.model.LatestNews;
 
 import retrofit2.http.GET;
+import retrofit2.http.Header;
 import rx.Observable;
 
 /**
@@ -15,10 +16,10 @@ import rx.Observable;
  * @version 2016/11/28
  */
 
-public interface ZhiHuApi {
+public interface NetworkApi {
 
     String BASE_URL = "http://news-at.zhihu.com/api/";
 
     @GET("4/news/latest")
-    Observable<LatestNews> getLastNews();
+    Observable<LatestNews> getLastNews(@Header("CacheOnly") boolean isCacheOnly);
 }

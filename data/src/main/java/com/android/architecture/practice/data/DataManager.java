@@ -1,11 +1,12 @@
 package com.android.architecture.practice.data;
 
-import com.android.architecture.practice.data.remote.ClientApiBuilder;
-import com.android.architecture.practice.data.remote.ZhiHuApi;
-import com.android.architecture.practice.data.remote.ZhiHuService;
+import android.content.Context;
+
+import com.android.architecture.practice.data.config.ConfigServiceImpl;
+import com.android.architecture.practice.data.network.NetworkServiceImpl;
 
 /**
- * <p>Title: <／p>
+ * <p>Title: 负责数据管理<／p>
  * <p>Description: <／p>
  * <p>Copyright: Copyright (c) 2016<／p>
  * <p>Company: NetDragon<／p>
@@ -18,28 +19,34 @@ public class DataManager {
 
     private static volatile DataManager sDataManager;
 
-    private ZhiHuService mZhiHuService;
+    private NetworkService mNetworkService;
+    private ConfigService mConfigService;
 
-    public DataManager(ZhiHuService zhiHuService) {
-        mZhiHuService = zhiHuService;
-    }
-
-    public static DataManager getInstance(String cacheDir) {
-        if (sDataManager == null) {
+    public static DataManager getInstance(Context context) {
+        if(sDataManager == null) {
             synchronized (DataManager.class) {
-                ZhiHuApi zhiHuApi = ClientApiBuilder.build(
-                        ZhiHuApi.class,
-                        ZhiHuApi.BASE_URL,
-                        cacheDir,
-                        null);
-                sDataManager = new DataManager(new ZhiHuService(zhiHuApi));
+                if(sDataManager == null) {
+                    sDataManager = new DataManager(
+                        new NetworkServiceImpl(context),
+                        new ConfigServiceImpl()
+                    );
+                }
             }
         }
 
         return sDataManager;
     }
 
-    public ZhiHuService getZhiHuService() {
-        return mZhiHuService;
+    public DataManager(NetworkService networkService, ConfigService configService) {
+        mNetworkService = networkService;
+        mConfigService = configService;
+    }
+
+    public NetworkService getNetworkService() {
+        return mNetworkService;
+    }
+
+    public ConfigService getConfigService() {
+        return mConfigService;
     }
 }
