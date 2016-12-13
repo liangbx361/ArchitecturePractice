@@ -29,3 +29,4 @@ Model层负责统一管理应用数据，包括网络数据、缓存数据、应
 * [Retrofit 使用教程大全](https://futurestud.io/tutorials/tag/retrofit)
 * [OkHttp3缓存策略](http://www.jianshu.com/p/9cebbbd0eeab)
 * [HTTP 状态码](http://blog.csdn.net/zll01/article/details/5018413)
+* [Dbflow VS GreenDao](https://github.com/Raizlabs/AndroidDatabaseLibraryComparison)
