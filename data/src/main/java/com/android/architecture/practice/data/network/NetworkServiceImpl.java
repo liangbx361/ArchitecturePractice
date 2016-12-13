@@ -4,7 +4,6 @@ import android.content.Context;
 
 import com.android.architecture.practice.data.NetworkService;
 import com.android.architecture.practice.data.model.LatestNews;
-import com.android.architecture.practice.data.remote.ClientApiBuilder;
 import com.liangbx.android.common.util.CacheUtil;
 
 import rx.Observable;
