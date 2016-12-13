@@ -3,7 +3,6 @@ package com.android.architecture.practice.data.network;
 import com.android.architecture.practice.data.model.LatestNews;
 
 import retrofit2.http.GET;
-import retrofit2.http.Header;
 import rx.Observable;
 
 /**
@@ -21,5 +20,5 @@ public interface NetworkApi {
     String BASE_URL = "http://news-at.zhihu.com/api/";
 
     @GET("4/news/latest")
-    Observable<LatestNews> getLastNews(@Header("CacheOnly") boolean isCacheOnly);
+    Observable<LatestNews> getLastNews();
 }

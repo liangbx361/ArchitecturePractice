@@ -6,6 +6,7 @@ import com.android.architecture.practice.data.NetworkService;
 import com.android.architecture.practice.data.model.LatestNews;
 import com.liangbx.android.common.util.CacheUtil;
 
+import okhttp3.Interceptor;
 import rx.Observable;
 
 /**
@@ -31,15 +32,12 @@ public class NetworkServiceImpl implements NetworkService {
                 NetworkApi.class,
                 NetworkApi.BASE_URL,
                 CacheUtil.getExternalCache(context),
-                new CacheInterceptor()
+                (Interceptor[]) null
         );
     }
 
     @Override
     public Observable<LatestNews> getLatestNews() {
-        return Observable.concat(
-                mNetworkApi.getLastNews(false),
-                mNetworkApi.getLastNews(true)
-        );
+        return mNetworkApi.getLastNews();
     }
 }

@@ -63,7 +63,7 @@ public class ClientApiBuilder {
         }
 
         //拦截器配置
-        if(interceptors != null) {
+        if(interceptors != null && interceptors[0] != null) {
             for (Interceptor interceptor : interceptors) {
                 builder.addInterceptor(interceptor);
             }
