@@ -23,17 +23,11 @@ dependencies {
     compile libs.okHttpLogInterceptor
     compile libs.retrofitRxJavaAdapter
 
-	compile 'com.android.support:appcompat-v7:24.2.1'
-
     provided libs.javaxAnnotation
     provided libs.supportAnnotation
-
-    androidTestCompile('com.android.support.test.espresso:espresso-core:2.2.2', {
-        exclude group: 'com.android.support', module: 'support-annotations'
-    })
     
     testCompile test.junit
     testCompile test.mockito
-    testCompile('org.robolectric:robolectric:3.1.2')
-    testCompile('org.robolectric:robolectric-annotations:3.1.2')
+    testCompile test.robolectric
+    testCompile test.robolectricAnnotations
 }

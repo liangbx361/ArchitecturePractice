@@ -26,11 +26,12 @@ ext {
     nineOldAndroidVersion = "2.4.0"
 
     //Testing
-    robolectricVersion = '2.4'
-    jUnitVersion = '4.11'
-    mockitoVersion = '1.9.5'
+    robolectricVersion = '3.1.2'
+    jUnitVersion = '4.12'
+    mockitoVersion = '2.+'
     dexmakerVersion = '1.0'
-    espressoVersion = '2.0'
+    espressoVersion = '2.2.2'
+    uiAutomatorVersion = '2.1.1'
     testingSupportLibVersion = '0.1'
 
     //Hermes
@@ -65,14 +66,16 @@ ext {
     ]
 
     test = [
-            junit            : "junit:junit:4.12",
-            robolectric      : "org.robolectric:robolectric:3.0",
-            burst            : "com.squareup.burst:burst-junit4:1.1.0",
-            mockito          : "org.mockito:mockito-core:${mockitoVersion}",
-            dexmaker         : "com.google.dexmaker:dexmaker:${dexmakerVersion}",
-            dexmakerMockito  : "com.google.dexmaker:dexmaker-mockito:${dexmakerVersion}",
-            espresso         : "com.android.support.test.espresso:espresso-core:${espressoVersion}",
-            testingSupportLib: "com.android.support.test:testing-support-lib:${testingSupportLibVersion}",
+            junit                 : "junit:junit:${jUnitVersion}",
+            robolectric           : "org.robolectric:robolectric:${robolectricVersion}",
+            robolectricAnnotations: "org.robolectric:robolectric-annotations:${robolectricVersion}",
+            burst                 : "com.squareup.burst:burst-junit4:1.1.0",
+            mockito               : "org.mockito:mockito-core:${mockitoVersion}",
+            dexmaker              : "com.google.dexmaker:dexmaker:${dexmakerVersion}",
+            dexmakerMockito       : "com.google.dexmaker:dexmaker-mockito:${dexmakerVersion}",
+            espresso              : "com.android.support.test.espresso:espresso-core:${espressoVersion}",
+            uiAutomator           : "com.android.support.test.uiautomator:uiautomator-v18:${uiAutomatorVersion}",
+            testingSupportLib     : "com.android.support.test:testing-support-lib:${testingSupportLibVersion}",
     ]
 
     hermes = [
