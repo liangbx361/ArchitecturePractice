@@ -24,6 +24,9 @@ ext {
     okHttpVersion = "3.4.2"
     jacksonVersion = "2.4.2"
     nineOldAndroidVersion = "2.4.0"
+    libphonenumberVersion = "7.0.10"
+    simpleXmlVersion = "1.9.0"
+    dbflowVersion = "3.0.0-beta6"
 
     //Testing
     robolectricVersion = '3.1.2'
@@ -63,6 +66,12 @@ ext {
             okHttpLogInterceptor : "com.squareup.okhttp3:logging-interceptor:${okHttpVersion}",
             timber               : "com.jakewharton.timber:timber:3.0.1",
             nineOldAndroid       : "com.nineoldandroids:library:${nineOldAndroidVersion}",
+            libphonenumber       : "com.googlecode.libphonenumber:libphonenumber:${libphonenumberVersion}",
+            simpleXml      : "com.squareup.retrofit:converter-simplexml:${simpleXmlVersion}",
+
+            dbflowProcessor: "com.github.Raizlabs.DBFlow:dbflow-processor:${dbflowVersion}",
+            dbflowCore     : "com.github.Raizlabs.DBFlow:dbflow-core:${dbflowVersion}",
+            dbflow         : "com.github.Raizlabs.DBFlow:dbflow:${dbflowVersion}",
     ]
 
     test = [
