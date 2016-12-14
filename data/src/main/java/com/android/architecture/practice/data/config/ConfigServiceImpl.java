@@ -1,7 +1,5 @@
 package com.android.architecture.practice.data.config;
 
-import com.android.architecture.practice.data.ConfigService;
-
 /**
  * <p>Title: <／p>
  * <p>Description: <／p>

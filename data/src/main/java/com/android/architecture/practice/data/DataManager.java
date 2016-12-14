@@ -2,7 +2,9 @@ package com.android.architecture.practice.data;
 
 import android.content.Context;
 
+import com.android.architecture.practice.data.config.ConfigService;
 import com.android.architecture.practice.data.config.ConfigServiceImpl;
+import com.android.architecture.practice.data.network.NetworkService;
 import com.android.architecture.practice.data.network.NetworkServiceImpl;
 
 /**

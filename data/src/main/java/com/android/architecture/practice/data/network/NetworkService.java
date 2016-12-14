@@ -1,4 +1,4 @@
-package com.android.architecture.practice.data;
+package com.android.architecture.practice.data.network;
 
 import com.android.architecture.practice.data.model.LatestNews;
 

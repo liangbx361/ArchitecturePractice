@@ -1,6 +1,5 @@
 package com.android.architecture.practice.data.network;
 
-import com.android.architecture.practice.data.NetworkService;
 import com.android.architecture.practice.data.log.DataLogger;
 import com.android.architecture.practice.log.DefaultLoggerImpl;
 
