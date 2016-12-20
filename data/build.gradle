@@ -19,15 +19,31 @@ dependencies {
 
     compile libs.rxJava
     compile libs.rxAndroid
+
+    //网络库
     compile libs.retrofitWithJackson
     compile libs.okHttpLogInterceptor
     compile libs.retrofitRxJavaAdapter
 
-    provided libs.javaxAnnotation
-    provided libs.supportAnnotation
-    
+    //数据库
+    apt libs.dbflowProcessor
+    compile libs.dbflowCore
+    compile libs.dbflow   
+    // compile libs.dbflowSqlCipher
+
+    //单元测试库
     testCompile test.junit
     testCompile test.mockito
     testCompile test.robolectric
     testCompile test.robolectricAnnotations
+
+    //注解库
+    provided libs.javaxAnnotation
+    provided libs.supportAnnotation
+}
+
+apt {
+    arguments {
+        targetModuleName 'DataCache'
+    }
 }

@@ -6,6 +6,8 @@ import com.android.architecture.practice.data.config.ConfigService;
 import com.android.architecture.practice.data.config.ConfigServiceImpl;
 import com.android.architecture.practice.data.network.NetworkService;
 import com.android.architecture.practice.data.network.NetworkServiceImpl;
+import com.raizlabs.android.dbflow.config.FlowConfig;
+import com.raizlabs.android.dbflow.config.FlowManager;
 
 /**
  * <p>Title: 负责数据管理<／p>
@@ -32,6 +34,7 @@ public class DataManager {
                         new NetworkServiceImpl(context),
                         new ConfigServiceImpl()
                     );
+                    sDataManager.initDbFlow(context);
                 }
             }
         }
@@ -50,5 +53,10 @@ public class DataManager {
 
     public ConfigService getConfigService() {
         return mConfigService;
+    }
+
+    private void initDbFlow(Context context) {
+        FlowManager.init(new FlowConfig.Builder(context).build());
+//        FlowManager.initModule(com.raizlabs.android.dbflow.config.DataCacheDatabaseHolder.class);
     }
 }

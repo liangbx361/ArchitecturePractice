@@ -26,7 +26,7 @@ ext {
     nineOldAndroidVersion = "2.4.0"
     libphonenumberVersion = "7.0.10"
     simpleXmlVersion = "1.9.0"
-    dbflowVersion = "3.0.0-beta6"
+    dbflowVersion = "4.0.0-beta3"
 
     //Testing
     robolectricVersion = '3.1.2'
@@ -72,6 +72,7 @@ ext {
             dbflowProcessor: "com.github.Raizlabs.DBFlow:dbflow-processor:${dbflowVersion}",
             dbflowCore     : "com.github.Raizlabs.DBFlow:dbflow-core:${dbflowVersion}",
             dbflow         : "com.github.Raizlabs.DBFlow:dbflow:${dbflowVersion}",
+            dbflowSqlCipher : "com.github.Raizlabs.DBFlow:dbflow-sqlcipher:${dbflowVersion}"
     ]
 
     test = [

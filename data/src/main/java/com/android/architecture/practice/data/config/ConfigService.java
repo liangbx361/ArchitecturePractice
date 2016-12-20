@@ -1,7 +1,7 @@
 package com.android.architecture.practice.data.config;
 
 /**
- * <p>Title: <／p>
+ * <p>Title: 应用配置信息<／p>
  * <p>Description: <／p>
  * <p>Copyright: Copyright (c) 2016<／p>
  * <p>Company: NetDragon<／p>
