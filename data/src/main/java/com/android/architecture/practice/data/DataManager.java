@@ -57,6 +57,6 @@ public class DataManager {
 
     private void initDbFlow(Context context) {
         FlowManager.init(new FlowConfig.Builder(context).build());
-//        FlowManager.initModule(com.raizlabs.android.dbflow.config.DataCacheDatabaseHolder.class);
+        FlowManager.initModule(com.raizlabs.android.dbflow.config.DataCacheGeneratedDatabaseHolder.class);
     }
 }

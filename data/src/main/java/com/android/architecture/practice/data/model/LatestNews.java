@@ -1,7 +1,15 @@
 package com.android.architecture.practice.data.model;
 
+import com.android.architecture.practice.data.db.DataCacheDatabase;
+import com.android.architecture.practice.data.db.DbConstants;
+import com.android.architecture.practice.data.db.converter.ConvertUtils;
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import com.fasterxml.jackson.annotation.JsonProperty;
+import com.raizlabs.android.dbflow.annotation.Column;
+import com.raizlabs.android.dbflow.annotation.PrimaryKey;
+import com.raizlabs.android.dbflow.annotation.Table;
+import com.raizlabs.android.dbflow.converter.TypeConverter;
+import com.raizlabs.android.dbflow.structure.BaseModel;
 
 import java.util.List;
 
@@ -16,12 +24,31 @@ import java.util.List;
  */
 
 @JsonIgnoreProperties(ignoreUnknown = true)
-public class LatestNews {
-    
+@Table(name = DbConstants.Table.LATEST_NEWS, database = DataCacheDatabase.class)
+public class LatestNews extends BaseModel {
+
+    // 自增ID
+    @Column(name = DbConstants.Column.ID)
+    @PrimaryKey(autoincrement = true)
+    private long id;
+
+    @Column(name = DbConstants.Column.DATE)
     private String date;
+
+    @Column(name = DbConstants.Column.STORIES, typeConverter = StoriesConverter.class)
     private List<StoriesEntity> stories;
+
+    @Column(name = DbConstants.Column.TOP_STORIES, typeConverter = TopStoriesConverter.class)
     @JsonProperty("top_stories")
     private List<TopStoriesEntity> topStories;
+
+    public long getId() {
+        return id;
+    }
+
+    public void setId(long id) {
+        this.id = id;
+    }
 
     public String getDate() {
         return date;
@@ -154,5 +181,31 @@ public class LatestNews {
                 ", stories=" + stories +
                 ", topStories=" + topStories +
                 '}';
+    }
+
+    public static class StoriesConverter extends TypeConverter<String, List<StoriesEntity>> {
+
+        @Override
+        public String getDBValue(List<StoriesEntity> model) {
+            return ConvertUtils.getDBValue(model);
+        }
+
+        @Override
+        public List<StoriesEntity> getModelValue(String data) {
+            return ConvertUtils.getModelListValue(data, StoriesEntity.class);
+        }
+    }
+
+    public static class TopStoriesConverter extends TypeConverter<String, List<TopStoriesEntity>> {
+
+        @Override
+        public String getDBValue(List<TopStoriesEntity> model) {
+            return ConvertUtils.getDBValue(model);
+        }
+
+        @Override
+        public List<TopStoriesEntity> getModelValue(String data) {
+            return ConvertUtils.getModelListValue(data, TopStoriesEntity.class);
+        }
     }
 }

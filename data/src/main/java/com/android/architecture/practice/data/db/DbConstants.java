@@ -16,14 +16,7 @@ public interface DbConstants {
      * 定义表名
      */
     interface Table {
-        String COURSE_LIST = "course_list";
-        String COURSE_INFO = "course_info";
-        String COURSE_CATALOG = "course_catalog";
-        String COURSE_VIDEO_PROGRESS = "course_video_progress";
-        String COURSE_DOC_PROGRESS = "course_doc_progress";
-        String COURSE_QUERY_LIST = "course_query_list";
-        String COURSE_EXAM_LIST = "course_exam_list";
-        String COURSE_USER_LIST = "course_user_list";
+        String LATEST_NEWS = "latest_news";
     }
 
     /**
@@ -95,6 +88,9 @@ public interface DbConstants {
         String PRIOR_COURSE_VOS = "prior_course_vos";
         String PASS_ALL_PRIOR_COURSE = "pass_all_prior_course";
         String CUSTOM_ID = "custom_id";
+        String DATE = "date";
+        String STORIES = "stories";
+        String TOP_STORIES = "topStories";
     }
 
 }
