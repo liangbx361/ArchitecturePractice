@@ -19,6 +19,24 @@ android {
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
     }
+    productFlavors {
+      //模拟数据版本
+      envMock{
+        applicationId 'com.android.practice.mock'
+      }
+      //开发环境版本
+      envDebug{
+        applicationId 'com.android.practice.debug'
+      }
+      //测试环境版本
+      envTest{
+        applicationId 'com.android.practice.test'
+      }
+      //生产环境版本
+      envProduct{
+        applicationId 'com.android.practice'
+      }
+  }
 }
 
 dependencies {

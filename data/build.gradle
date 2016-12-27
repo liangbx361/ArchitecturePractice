@@ -3,13 +3,7 @@ apply from: "${cacheConfigs}/gradle/retrolambda.gradle"
 apply plugin: 'com.neenbedankt.android-apt'
 
 android {
-//	productFlavors {
-//       mock{
-//       }
-//       product{
-//
-//       }
-//   }
+
 }
 
 dependencies {
