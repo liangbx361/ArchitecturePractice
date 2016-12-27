@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+      xmlns:app="http://schemas.android.com/apk/res-auto">
+
+
+    <!--android:icon="@drawable/ic_menu_ui"/>-->
+
+    <item android:id="@+id/menu_nav_home"
+          android:enabled="true"
+          app:showAsAction="ifRoom"
+          android:title="@string/menu_nav_home"/>
+
+    <item android:id="@+id/menu_nav_patient"
+          android:enabled="true"
+          app:showAsAction="ifRoom"
+          android:title="@string/menu_nav_patient"/>
+
+    <item android:id="@+id/menu_nav_friends"
+          android:enabled="true"
+          app:showAsAction="ifRoom"
+          android:title="@string/menu_nav_friends"/>
+
+    <item android:id="@+id/menu_nav_mine"
+          android:enabled="true"
+          app:showAsAction="ifRoom"
+          android:title="@string/menu_nav_mine"/>
+</menu>

@@ -1,1 +1,1 @@
-include ':app', ':data', ':common-log', ':common-util', ':common-filter', ':common-mapper'
+include ':app', ':data', ':common-log', ':common-util', ':common-filter', ':common-mapper', ':easy-home-doctor-app'
