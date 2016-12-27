@@ -6,4 +6,7 @@
     <string name="menu_nav_patient">患者</string>
     <string name="menu_nav_friends">学术圈</string>
     <string name="menu_nav_mine">我的</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>
