@@ -53,6 +53,6 @@ public class DefaultLoggerImpl implements Logger {
 
     @Override
     public boolean isDebug() {
-        return false;
+        return BuildConfig.DEBUG;
     }
 }

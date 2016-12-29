@@ -11,10 +11,10 @@
         id="@+id/nav_patient"
         title="@string/menu_nav_patient"/>
 
-    <tab
-        icon="@drawable/ic_friends"
-        id="@+id/nav_friends"
-        title="@string/menu_nav_friends"/>
+    <!--<tab-->
+        <!--icon="@drawable/ic_friends"-->
+        <!--id="@+id/nav_friends"-->
+        <!--title="@string/menu_nav_friends"/>-->
 
     <tab
         icon="@drawable/ic_recents"

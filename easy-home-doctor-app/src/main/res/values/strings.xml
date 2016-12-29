@@ -9,4 +9,17 @@
 
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="title_activity_main2">Main2Activity</string>
+    <string name="action_settings">Settings</string>
+    <string name="section_format">Hello World from section: %1$d</string>
+
+    <!-- 职称 -->
+    <string-array name="doctor_title">
+        <item>主任</item>
+        <item>副主任</item>
+        <item>国家职业医师</item>
+        <item>执业助理医师</item>
+        <item>中医师</item>
+        <item>理疗师</item>
+    </string-array>
 </resources>
