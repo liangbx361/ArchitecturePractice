@@ -1,8 +1,9 @@
-package com.easy.home.doctor.android;
+package com.easy.home.doctor.android.helper;
 
 import android.widget.ImageView;
 
 import com.bumptech.glide.Glide;
+import com.easy.home.doctor.android.R;
 import com.liangbx.android.banner.ImageLoader;
 
 /**

@@ -1,4 +1,4 @@
-package com.easy.home.doctor.android;
+package com.easy.home.doctor.android.helper;
 
 import android.content.Context;
 import android.view.Gravity;
@@ -6,6 +6,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
+import com.easy.home.doctor.android.R;
 import com.liangbx.android.banner.Indicator;
 import com.liangbx.android.banner.model.BannerItem;
 import com.rd.PageIndicatorView;

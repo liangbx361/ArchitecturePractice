@@ -1,4 +1,4 @@
-package com.easy.home.doctor.android.home;
+package com.easy.home.doctor.android.ui.home;
 
 import android.content.Context;
 import android.os.Bundle;
@@ -8,8 +8,8 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
-import com.easy.home.doctor.android.CycleIndicator;
-import com.easy.home.doctor.android.GlideImageLoader;
+import com.easy.home.doctor.android.helper.CycleIndicator;
+import com.easy.home.doctor.android.helper.GlideImageLoader;
 import com.easy.home.doctor.android.R;
 import com.liangbx.android.banner.BannerView;
 import com.liangbx.android.banner.model.BannerItem;

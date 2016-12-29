@@ -1,4 +1,4 @@
-package com.easy.home.doctor.android;
+package com.easy.home.doctor.android.ui;
 
 import android.os.Bundle;
 import android.support.annotation.NonNull;
@@ -8,9 +8,10 @@ import android.support.v4.app.FragmentTransaction;
 import android.support.v7.app.AppCompatActivity;
 import android.widget.FrameLayout;
 
-import com.easy.home.doctor.android.home.HomeFragment;
-import com.easy.home.doctor.android.mine.MineFragment;
-import com.easy.home.doctor.android.patient.PatientFragment;
+import com.easy.home.doctor.android.R;
+import com.easy.home.doctor.android.ui.home.HomeFragment;
+import com.easy.home.doctor.android.ui.mine.MineFragment;
+import com.easy.home.doctor.android.ui.patient.PatientFragment;
 import com.roughike.bottombar.BottomBar;
 
 import java.util.HashMap;

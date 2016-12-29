@@ -1,4 +1,4 @@
-package com.easy.home.doctor.android.patient;
+package com.easy.home.doctor.android.ui.mine;
 
 import android.content.Context;
 import android.os.Bundle;
@@ -12,9 +12,9 @@ import com.easy.home.doctor.android.R;
 /**
  * 主页
  */
-public class PatientFragment extends Fragment {
+public class MineFragment extends Fragment {
 
-    public PatientFragment() {
+    public MineFragment() {
         // Required empty public constructor
     }
 
@@ -25,8 +25,8 @@ public class PatientFragment extends Fragment {
      * @return A new instance of fragment HomeFragment.
      */
     // TODO: Rename and change types and number of parameters
-    public static PatientFragment newInstance() {
-        PatientFragment fragment = new PatientFragment();
+    public static MineFragment newInstance() {
+        MineFragment fragment = new MineFragment();
         Bundle args = new Bundle();
         fragment.setArguments(args);
         return fragment;
@@ -42,7 +42,7 @@ public class PatientFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_patinet, container, false);
+        return inflater.inflate(R.layout.fragment_mine, container, false);
     }
 
     @Override
