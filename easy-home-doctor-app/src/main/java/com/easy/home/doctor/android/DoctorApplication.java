@@ -7,9 +7,12 @@ import android.content.Context;
 import android.content.Intent;
 import android.content.IntentFilter;
 import android.os.Bundle;
+import android.support.annotation.MainThread;
 
 import com.easy.home.doctor.android.log.AppLogger;
+import com.liangbx.android.common.util.ProcessUtil;
 import com.squareup.leakcanary.LeakCanary;
+import com.tencent.bugly.crashreport.CrashReport;
 
 /**
  * <p>Title: <／p>
@@ -29,10 +32,12 @@ public class DoctorApplication extends Application {
     @Override
     public void onCreate() {
         super.onCreate();
+        AppLogger.get().d("DoctorApplication", "--> 应用初始化");
 
         listenForForeground();
         listenForScreenTurningOff();
         initLeakCanary();
+        initBugly(this);
     }
 
     private void listenForForeground() {
@@ -98,6 +103,17 @@ public class DoctorApplication extends Application {
         }
     }
 
+    @Override
+    public void onLowMemory() {
+        super.onLowMemory();
+    }
+
+    @Override
+    public void onTerminate() {
+        super.onTerminate();
+        AppLogger.get().d("DoctorApplication", "--> 应用被销毁");
+    }
+
     private void notifyForeground() {
         // This is where you can notify listeners, handle session tracking, etc
         AppLogger.get().d("DoctorApplication", "--> 进入前台");
@@ -117,5 +133,17 @@ public class DoctorApplication extends Application {
             return;
         }
         LeakCanary.install(this);
+    }
+
+    @MainThread
+    public void initBugly(Context context) {
+        // 获取当前包名
+        String packageName = context.getPackageName();
+        // 获取当前进程名
+        String processName = ProcessUtil.getProcessName(android.os.Process.myPid());
+        // 设置是否为上报进程
+        CrashReport.UserStrategy strategy = new CrashReport.UserStrategy(context);
+        strategy.setUploadProcess(processName == null || processName.equals(packageName));
+        CrashReport.initCrashReport(getApplicationContext(), "注册时申请的APPID", BuildConfig.DEBUG, strategy);
     }
 }

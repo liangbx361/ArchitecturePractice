@@ -3,16 +3,16 @@ package com.easy.home.doctor.android.ui.home;
 import android.content.Context;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
-import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
+import com.easy.home.doctor.android.R;
 import com.easy.home.doctor.android.helper.CycleIndicator;
 import com.easy.home.doctor.android.helper.GlideImageLoader;
-import com.easy.home.doctor.android.R;
 import com.liangbx.android.banner.BannerView;
 import com.liangbx.android.banner.model.BannerItem;
+import com.liangbx.android.common.base.BaseFragment;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -23,7 +23,7 @@ import butterknife.ButterKnife;
 /**
  * 主页
  */
-public class HomeFragment extends Fragment {
+public class HomeFragment extends BaseFragment {
 
     @BindView(R.id.banner)
     BannerView mBannerView;

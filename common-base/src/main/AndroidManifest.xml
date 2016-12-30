@@ -1,3 +1,4 @@
-<manifest package="com.liangbx.android.common.util"
+<manifest package="com.liangbx.android.common.base"
           xmlns:android="http://schemas.android.com/apk/res/android">
+
 </manifest>

@@ -1,6 +1,6 @@
 # Add project specific ProGuard rules here.
 # By default, the flags in this file are appended to flags specified
-# in O:\Tool\android-sdk/tools/proguard/proguard-android.txt
+# in E:\ND\tools\android-sdk-windows/tools/proguard/proguard-android.txt
 # You can edit the include path and order by changing the proguardFiles
 # directive in build.gradle.
 #
@@ -15,7 +15,3 @@
 #-keepclassmembers class fqcn.of.javascript.interface.for.webview {
 #   public *;
 #}
-
-# Bugly
--dontwarn com.tencent.bugly.**
--keep public class com.tencent.bugly.**{*;}

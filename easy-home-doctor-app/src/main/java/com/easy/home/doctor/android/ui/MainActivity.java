@@ -5,13 +5,13 @@ import android.support.annotation.NonNull;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentTransaction;
-import android.support.v7.app.AppCompatActivity;
 import android.widget.FrameLayout;
 
 import com.easy.home.doctor.android.R;
 import com.easy.home.doctor.android.ui.home.HomeFragment;
 import com.easy.home.doctor.android.ui.mine.MineFragment;
 import com.easy.home.doctor.android.ui.patient.PatientFragment;
+import com.liangbx.android.common.base.BaseActivity;
 import com.roughike.bottombar.BottomBar;
 
 import java.util.HashMap;
@@ -21,7 +21,7 @@ import java.util.Map;
 import butterknife.BindView;
 import butterknife.ButterKnife;
 
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends BaseActivity {
 
     private Map<String, Fragment> mFragmentMap = new HashMap<>();
 
