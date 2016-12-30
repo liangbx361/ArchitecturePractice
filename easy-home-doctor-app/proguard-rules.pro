@@ -116,3 +116,30 @@ public <init>(android.content.Context, android.util.AttributeSet, int);
 # Bugly
 -dontwarn com.tencent.bugly.**
 -keep public class com.tencent.bugly.**{*;}
+
+# Jackson
+-dontwarn com.fasterxml.jackson.databind.**
+-keepnames class com.fasterxml.jackson.** { *; }
+-keepclasseswithmembernames class * {
+    @com.fasterxml.jackson.annotation.* <fields>;
+}
+
+# okhttp
+-dontwarn com.squareup.okhttp.**
+-dontwarn okio.**
+
+# Retrofit
+-dontwarn retrofit.**
+-keep class retrofit.** { *; }
+-keepattributes Signature
+-keepattributes Exceptions
+
+# Butterknife
+# Retain generated class which implement Unbinder.
+-keep public class * implements butterknife.Unbinder { public <init>(...); }
+
+# Prevent obfuscation of types which use ButterKnife annotations since the simple name
+# is used to reflectively look up the generated ViewBinding.
+-keep class butterknife.*
+-keepclasseswithmembernames class * { @butterknife.* <methods>; }
+-keepclasseswithmembernames class * { @butterknife.* <fields>; }
