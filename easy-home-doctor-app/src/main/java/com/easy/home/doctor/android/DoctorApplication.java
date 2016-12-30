@@ -144,6 +144,6 @@ public class DoctorApplication extends Application {
         // 设置是否为上报进程
         CrashReport.UserStrategy strategy = new CrashReport.UserStrategy(context);
         strategy.setUploadProcess(processName == null || processName.equals(packageName));
-        CrashReport.initCrashReport(getApplicationContext(), "注册时申请的APPID", BuildConfig.DEBUG, strategy);
+        CrashReport.initCrashReport(getApplicationContext(), "a761e55f9e", BuildConfig.DEBUG, strategy);
     }
 }
