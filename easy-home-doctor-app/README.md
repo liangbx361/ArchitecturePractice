@@ -27,6 +27,7 @@
 | RecyclerView    |                                          |
 | Bugly           | https://bugly.qq.com/v2/                 |
 | 第三方登入           |                                          |
+| IM              | 环信                          |
 | 混淆配置            |                                          |
 | 签名打包            |                                          |
 | 消息推送            |                                          |

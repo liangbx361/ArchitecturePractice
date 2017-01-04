@@ -4,12 +4,12 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:id="@+id/toolbar"
     android:layout_width="match_parent"
-    android:layout_height="@dimen/toolbarSize"
+    android:layout_height="56dp"
     android:fitsSystemWindows="true"
     android:minHeight="?attr/actionBarSize"
     android:background="?attr/colorPrimary"
     app:popupTheme="@style/ThemeOverlay.AppCompat.Dark"
     app:titleTextColor="@color/text_color_white"
     app:subtitleTextColor="@color/text_color_white"
-    app:navigationIcon="@drawable/icon_toolbar_navigation">
+    app:navigationIcon="@drawable/ic_navigation_back">
 </android.support.v7.widget.Toolbar>
