@@ -14,7 +14,6 @@ import com.liangbx.android.banner.BannerView;
 import com.liangbx.android.banner.model.BannerItem;
 import com.liangbx.android.common.base.BaseFragment;
 
-import java.util.ArrayList;
 import java.util.List;
 
 import butterknife.BindView;
@@ -23,10 +22,12 @@ import butterknife.ButterKnife;
 /**
  * 主页
  */
-public class HomeFragment extends BaseFragment {
+public class HomeFragment extends BaseFragment implements HomeContract.View{
 
     @BindView(R.id.banner)
     BannerView mBannerView;
+
+    private HomeContract.Presenter mPresenter;
 
     public HomeFragment() {
     }
@@ -55,6 +56,9 @@ public class HomeFragment extends BaseFragment {
         ButterKnife.bind(this, view);
 
         initBanner();
+
+        mPresenter = new HomePresenter(getContext(), this);
+        mPresenter.start();
     }
 
     @Override
@@ -86,18 +90,20 @@ public class HomeFragment extends BaseFragment {
 
     private void initBanner() {
         mBannerView.setImageLoader(new GlideImageLoader());
-
-        //设置数据
-        List<BannerItem> bannerItems = new ArrayList<>();
-        bannerItems.add(new BannerItem("http://img1.3lian.com/img13/c3/26/d/81.jpg", "bird"));
-        bannerItems.add(new BannerItem("http://img1.3lian.com/img13/c3/26/d/81.jpg", "bird"));
-        bannerItems.add(new BannerItem("http://img1.3lian.com/img13/c3/26/d/81.jpg", "bird"));
-        mBannerView.setData(bannerItems);
-        mBannerView.setIndicator(new CycleIndicator(bannerItems.size()));
-
         //设置点击监听事件
         mBannerView.setOnItemClickListener(position -> {
-
+            mPresenter.onBannerItemClick(position);
         });
+    }
+
+    @Override
+    public void setBannerData(List<BannerItem> bannerItems) {
+        mBannerView.setData(bannerItems);
+        mBannerView.setIndicator(new CycleIndicator(bannerItems.size()));
+    }
+
+    @Override
+    public void setPresenter(HomeContract.Presenter presenter) {
+        mPresenter = presenter;
     }
 }

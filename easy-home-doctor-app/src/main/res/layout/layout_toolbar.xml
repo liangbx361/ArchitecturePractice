@@ -6,7 +6,6 @@
     android:layout_width="match_parent"
     android:layout_height="56dp"
     android:fitsSystemWindows="true"
-    android:minHeight="?attr/actionBarSize"
     android:background="?attr/colorPrimary"
     app:popupTheme="@style/ThemeOverlay.AppCompat.Dark"
     app:titleTextColor="@color/text_color_white"
