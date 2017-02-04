@@ -1,1 +1,7 @@
-include ':app', ':data', ':common-log', ':common-util', ':common-filter', ':common-mapper', ':easy-home-doctor-app', ':common-base'
+include ':app'
+include ':easy-home-doctor-app'
+include ':data'
+include ':common-base', ':common-log', ':common-util', ':common-filter', ':common-mapper'
+include ':huanxin-im', ':im-hx'
+
+
