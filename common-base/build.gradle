@@ -4,6 +4,9 @@ dependencies {
     compile fileTree(dir: 'libs', include: ['*.jar'])
 
     compile libs.appcompat
+    //RxJava生命周期绑定，避免内存泄漏
+    compile 'com.trello:rxlifecycle:1.0'
+    compile 'com.trello:rxlifecycle-components:1.0'
 
     testCompile test.junit
     testCompile test.mockito

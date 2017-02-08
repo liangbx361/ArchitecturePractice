@@ -2,18 +2,15 @@
 
 ## 特性
 * 添加闪屏页
-
 * 增加应用前后台状态监听
-
 * 集成内存泄露工具LeakCanary
-
 * 集成崩溃信息收集工具Bugly（注：NDK未集成）
-
 * 添加常用混淆配置
+* MVP
 
 ## 待支持特性
-* MVP架构
-
+* [RxLifecycle](https://github.com/trello/RxLifecycle)
+* [RxPermission](https://github.com/tbruyelle/RxPermissions)
   ​
 
 | 功能点             | 说明                                       |

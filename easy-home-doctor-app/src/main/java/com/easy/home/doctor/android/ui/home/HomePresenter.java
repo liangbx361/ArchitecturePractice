@@ -17,12 +17,12 @@ import java.util.List;
  * @version 2017/2/4
  */
 
-public class HomePresenter implements HomeContract.Presenter {
+class HomePresenter implements HomeContract.Presenter {
 
     private Context mContext;
     private HomeContract.View mView;
 
-    public HomePresenter(Context context, HomeContract.View view) {
+    HomePresenter(Context context, HomeContract.View view) {
         mContext = context;
         mView = view;
         mView.setPresenter(this);
