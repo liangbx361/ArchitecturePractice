@@ -40,7 +40,11 @@ allprojects {
 }
 
 subprojects { project ->
-    configurations.all { resolutionStrategy.cacheChangingModulesFor 0, 'seconds' }
+    configurations.all {
+        resolutionStrategy.cacheChangingModulesFor 0, 'seconds'
+        resolutionStrategy.force 'com.google.code.findbugs:jsr305:3.0.1'
+
+    }
 }
 
 task clean(type: Delete) {

@@ -17,7 +17,7 @@ import java.util.List;
  * @version 2017/2/4
  */
 
-class HomePresenter implements HomeContract.Presenter {
+public class HomePresenter implements HomeContract.Presenter {
 
     private Context mContext;
     private HomeContract.View mView;

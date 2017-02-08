@@ -16,7 +16,7 @@ import java.util.List;
  * @version 2017/2/4
  */
 
-class HomeContract {
+public interface HomeContract {
 
     interface View extends BaseView<Presenter> {
         void setBannerData(List<BannerItem> bannerItems);
